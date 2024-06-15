@@ -1,0 +1,117 @@
+{
+  "settings": {
+    "name": "Site 2024-06-15 12:57",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.18",
+    "siteFonts": [],
+    "uniqCompNum": 6,
+    "versionPublish": "5.9.18"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "DeBridge Finance | Official Site | Home",
+        "meta_descr": "deBridge finance is a cross-chain interoperability and liquidity transfer protocol that allows decentralized transfer of data and assets between various",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-content-text": {
+              "@media (max-width: 767px)": {
+                "padding": "0 1.5rem 1.5rem 1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "0 2.25rem 2.25rem 2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "1rem 4rem 4rem 4rem"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article08",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article8\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <div class=\"image-wrapper d-flex justify-content-center mb-4\">\n            <img mbr-if=\"showImage\" src=\"@PROJECT_PATH@/assets/images/debridge-finance.png\" alt=\"DeBridge Finance\">\n          </div>\n          <div class=\"card-content-text\">\n            <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>DeBridge Finance | Official Site | Home</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>DeBridge Finance: Bridging the Gap in Decentralized Finance</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://debridges-finance.github.io/\" class=\"text-primary\">DeBridge Finance</a> is a decentralized platform designed to facilitate secure and efficient cross-chain transfers of assets and data. By leveraging advanced cryptographic techniques and a decentralized network of validators, DeBridge Finance enables seamless interoperability between disparate blockchain networks. This not only enhances the functionality of DeFi applications but also opens up new possibilities for innovation and collaboration in the crypto space.<br><br>How to use deBridge?\n<br>In this example I will bridge SOL from Solana to ETH in Optimism network.\n<br>\n<br>First you will need to navigate to app.debridge.finance. When you connect your wallet you will see the main bridge/swap interface:\n<br><br><b>DeBridge main view</b><br><b>\n</b><br>1. From the main view choose SOL and connect your Phantom wallet<br>\n<br>2. Choose SOL and choose the amount you want to bridge<br>\n<br>3. Choose chain where you want to bridge your funds, in this example I choose Optimism<br>\n<br>4. Choose what token you want the SOL to be swapped to, often ETH is the best and cheapest option<br>\n<br>5. IMPORTANT: Write down the Optimism address you want to receive your ETH. Since we are bridging from SOL, we don’t need to connect our Optimism (EVM) wallet in order to bridge, but we need to remember to paste corrent “RECIPIENT’S OPTIMISM ADDRESS”<br>\n<br>6. ClickConfirm trade and accept the trade in your Solana Wallet<br>\n<br>7. That’s it! deBridge is very fast so you should see your ETH in your Optimism wallet in few minutes<br><br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Key Features of DeBridge Finance</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>1. Cross-Chain Interoperability</b> The core feature of DeBridge Finance is its ability to enable cross-chain interoperability. Users can transfer assets and data between different blockchain networks, such as Ethereum, Binance Smart Chain, Solana, and more. This interoperability layer ensures that DeFi applications can interact with multiple blockchain ecosystems, enhancing their utility and reach.<br><br><b>2. Decentralized Validation Network&nbsp;</b>DeBridge Finance employs a decentralized network of validators to secure cross-chain transactions. Validators are incentivized to act honestly through a combination of staking mechanisms and reputation systems. This decentralized approach ensures that the platform remains secure and resistant to censorship or manipulation.<br><br><b>3. Smart Contract Calls</b> In addition to asset transfers, DeBridge Finance supports cross-chain smart contract calls. This feature allows DeFi applications to execute complex transactions and logic across different blockchain networks. For example, a smart contract on Ethereum can trigger actions on Binance Smart Chain, enabling more sophisticated and interconnected DeFi protocols.<br><br><b>4. Native Asset Transfers&nbsp;</b>Unlike traditional wrapped tokens, DeBridge Finance enables the transfer of native assets between blockchain networks. This reduces the complexity and risks associated with wrapped tokens, such as liquidity fragmentation and security vulnerabilities. Users can move their assets freely without having to rely on intermediaries or custodians.<br><br><b>5. Composable DeFi Infrastructure&nbsp;</b>DeBridge Finance provides a composable infrastructure that allows developers to build interoperable DeFi applications. By integrating with DeBridge, developers can create protocols that leverage the strengths of multiple blockchain networks. This composability fosters innovation and enables the creation of more robust and versatile DeFi solutions.</p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Benefits of DeBridge Finance</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>Enhanced Liquidity</b><br>By enabling cross-chain transfers, DeBridge Finance enhances liquidity in the DeFi ecosystem. Assets can flow freely between different blockchain networks, reducing liquidity fragmentation and increasing the efficiency of capital allocation. This results in better trading opportunities and improved market dynamics.<br><br><b>Increased Security</b><br>DeBridge Finance’s decentralized validation network ensures that cross-chain transactions are secure and reliable. The use of advanced cryptographic techniques and incentive mechanisms minimizes the risk of fraud or manipulation. Users can trust that their assets and data are protected at all times.<br><br><b>Lower Costs</b><br>Traditional cross-chain solutions often involve high fees and complex processes. DeBridge Finance simplifies cross-chain transfers and reduces associated costs. Users can move their assets and execute smart contract calls with minimal fees, making DeFi more accessible and cost-effective.<br><br><b>Greater Flexibility</b><br>The ability to transfer native assets and execute smart contract calls across different blockchain networks provides greater flexibility for DeFi applications. Developers can design protocols that leverage the unique features of various blockchains, creating more powerful and versatile financial products.<br><br><b>Community-Driven Governance</b><br>DeBridge Finance embraces a community-driven governance model. Token holders can propose and vote on key decisions, ensuring that the platform evolves in a way that reflects the needs and preferences of its users. This democratic approach fosters a sense of ownership and aligns the platform’s development with the interests of the community.<br><br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Use Cases of DeBridge Finance</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>Cross-Chain Decentralized Exchanges (DEXs)<br></b>DeBridge Finance enables the creation of cross-chain DEXs that allow users to trade assets across different blockchain networks seamlessly. This opens up new trading opportunities and improves liquidity in the DeFi ecosystem.<br><br><b>Interoperable DeFi Protocols</b><br>DeFi protocols can leverage DeBridge Finance to interact with multiple blockchain networks. For example, a lending protocol on Ethereum can accept collateral from Binance Smart Chain, expanding its user base and increasing its utility.<br><br><b>Cross-Chain Yield Farming</b><br>Yield farming strategies can be enhanced by utilizing DeBridge Finance’s cross-chain capabilities. Users can optimize their returns by farming on multiple blockchain networks simultaneously, accessing higher yields and diversifying their risk.<br><br><b>Cross-Chain NFTs</b><br>Non-fungible tokens (NFTs) can benefit from cross-chain interoperability as well. Artists and creators can mint NFTs on one blockchain and sell them on another, reaching a broader audience and maximizing their exposure.<br><br><b>Multi-Chain DAOs</b><br>Decentralized Autonomous Organizations (DAOs) can operate more effectively by leveraging DeBridge Finance. Cross-chain governance and treasury management enable DAOs to interact with multiple blockchain networks, enhancing their functionality and reach.<br><br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>The Future of DeBridge Finance</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://debridge.finance/\" class=\"text-primary\">DeBridge Finance</a> is poised to play a pivotal role in the future of decentralized finance. As the DeFi ecosystem continues to grow and evolve, the need for interoperability and seamless cross-chain interactions will become increasingly important. DeBridge Finance’s innovative solutions position it as a leader in this space, enabling new possibilities for collaboration and innovation.<br><br>The platform’s commitment to security, decentralization, and community-driven governance ensures that it will remain a trusted and reliable partner for DeFi applications. By fostering a more interconnected and efficient DeFi ecosystem, DeBridge Finance is helping to unlock the full potential of blockchain technology and drive the next wave of financial innovation.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Conclusion</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">DeBridge Finance is revolutionizing the DeFi landscape by providing a decentralized interoperability layer for cross-chain transfers and smart contract calls. Its innovative features, such as native asset transfers and decentralized validation, address key challenges in the crypto space and enhance the functionality of DeFi applications. With its focus on security, flexibility, and community-driven governance, DeBridge Finance is set to become a cornerstone of the decentralized finance ecosystem.</p>\n              </div>\n            </div>\n\n            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n              <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n            </div>\n          </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "ufKKpn0XjL",
+          "_anchor": "article08-5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
